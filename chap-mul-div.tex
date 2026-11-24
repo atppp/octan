@@ -1,0 +1,171 @@
+\chapter{Multiplication and Division}
+\label{ch:mul-div}
+
+Multiplication is simply repeated addition. For example, $3 \times 6$ is six, three times. From $0$, count on $6$ and you land on $6$. Count on $6$ again and you land on $14$. Count on $6$ once more and you land on $22$. So $3 \times 6 = 22$. Counting on by the same amount like this is called skip counting.
+
+\section{Multiplication Table}
+
+Instead of skip counting every time, kids are often taught to memorize a table of one single digit times another. Here is that table. The entry is the row times the column.
+
+\vspace{1em}
+\begin{center}
+\setlength{\tabcolsep}{0.55em}
+\newcommand{\rep}[1]{\cellcolor{octanrepeat}\textcolor{octanrepeattext}{#1}}
+\begin{tabular}{|c!{\vrule width 1.2pt}c|c|c|c|c|c|c|}
+\hline
+$\times$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ \\
+\noalign{\global\arrayrulewidth=1.2pt}
+\hline
+\noalign{\global\arrayrulewidth=0.4pt}
+$1$ & $1$ & \rep{$2$} & \rep{$3$} & \rep{$4$} & \rep{$5$} & \rep{$6$} & \rep{$7$} \\
+\hline
+$2$ & $2$ & $4$ & \rep{$6$} & \rep{$10$} & \rep{$12$} & \rep{$14$} & \rep{$16$} \\
+\hline
+$3$ & $3$ & $6$ & $11$ & \rep{$14$} & \rep{$17$} & \rep{$22$} & \rep{$25$} \\
+\hline
+$4$ & $4$ & $10$ & $14$ & $20$ & \rep{$24$} & \rep{$30$} & \rep{$34$} \\
+\hline
+$5$ & $5$ & $12$ & $17$ & $24$ & $31$ & \rep{$36$} & \rep{$43$} \\
+\hline
+$6$ & $6$ & $14$ & $22$ & $30$ & $36$ & $44$ & \rep{$52$} \\
+\hline
+$7$ & $7$ & $16$ & $25$ & $34$ & $43$ & $52$ & $61$ \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{1em}
+
+\section{Distributive Property}
+
+Just like addition, multiplication is associative and commutative, so the grouping and the order of a product can be changed freely. Multiplication is also distributive over addition. For example,
+\[
+  3 \times (4 + 5) = 3 \times 11 = 33,
+\]
+and splitting the sum first gives the same product,
+\[
+  3 \times 4 + 3 \times 5 = 14 + 17 = 33.
+\]
+
+This can often be shown with a grid of beans. Three rows of $11$, split into a group of $4$ and a group of $5$:
+\begin{center}
+\setlength{\tabcolsep}{0.65em}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{c|c|c|c|c!{\vrule width 1.2pt}c|c|c|c|c|}
+\cline{2-10}
+& $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ \\
+\cline{2-10}
+$3$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ \\
+\cline{2-10}
+& $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ \\
+\cline{2-10}
+\multicolumn{1}{c}{} & \multicolumn{4}{c}{$4$} & \multicolumn{5}{c}{$5$}
+\end{tabular}
+\end{center}
+You can see why the distributive property works. The $3 \times 11$ beans are the $3 \times 4$ beans together with the $3 \times 5$ beans.
+
+\section{Multi-digit Multiplication}
+
+The distributive property is the key principle behind most strategies for computing a multi-digit multiplication. Kids are often first taught to multiply a multiple-digit number by a single digit. For example,
+\[
+  27 \times 4 = 20 \times 4 + 7 \times 4 = 100 + 34 = 134.
+\]
+Once this is mastered, the result can often be written with no intermediate steps. From $7 \times 4 = 34$, write the $4$ and temporarily remember the carry-over on the tens digit, the $3$, and then add that $3$ to the result of $2 \times 4 = 10$. The sum is $13$, which is written to the left of the $4$.
+
+This is the foundation of the vertical form. For example, $23 \times 14$ is $23 \times 10 + 23 \times 4$:
+\[
+  \begin{array}{@{}c@{\hspace{0.75em}}c@{\hspace{0.55em}}c@{\hspace{0.55em}}c@{}}
+          &   & 2 & 3 \\
+    \times &   & 1 & 4 \\
+    \cline{2-4}
+          & 1 & 1 & 4 \\
+          & 2 & 3 &   \\
+    \cline{2-4}
+          & 3 & 4 & 4
+  \end{array}
+\]
+Now this same procedure can be extended to more digits. Take the square of $276$ from the preface:
+\[
+  \begin{array}{@{}c@{\hspace{0.75em}}c@{\hspace{0.55em}}c@{\hspace{0.55em}}c@{\hspace{0.55em}}c@{\hspace{0.55em}}c@{\hspace{0.55em}}c@{}}
+          &   &   &   & 2 & 7 & 6 \\
+    \times &   &   &   & 2 & 7 & 6 \\
+    \cline{2-7}
+          & {\scriptscriptstyle 1} & {\scriptscriptstyle 1} & {\scriptscriptstyle 1} & {\scriptscriptstyle 1} & & \\
+          &   &   & 2 & 1 & 6 & 4 \\
+          &   & 2 & 4 & 6 & 2 &   \\
+          &   & 5 & 7 & 4 &   &   \\
+    \cline{2-7}
+          & 1 & 0 & 6 & 4 & 0 & 4
+  \end{array}
+\]
+The addition at the bottom also writes the carry-over for each column, so we don't get confused. Some students prefer to write the carry-over at the bottom instead of the top, and there is no real standard here. American schools often teach a few other strategies for multi-digit multiplication. We found this vertical form the most intuitive. A five-digit number times a five-digit number can conceivably be carried out without a single mistake most of the time, which makes for a fun family competition. Six-digit multiplication is a bit much. One almost certainly starts making mistakes, and the fun goes out of it.
+
+\section{Division}
+
+Division is the reverse of multiplication. From $27 \times 4 = 134$ we also have $134 \div 4 = 27$ and $134 \div 27 = 4$. In vertical form,
+\[
+  \begin{array}{@{}c@{\hspace{0.2em}}c@{\hspace{0.15em}}c@{\hspace{0.55em}}c@{\hspace{0.55em}}c@{}}
+        &   &   & 2 & 7 \\[0.45em]
+    \cline{2-5}
+      4 & \raisebox{0.65ex}{\big)} & 1 & 3 & 4 \\
+        &   & 1 & 0 &   \\
+    \cline{3-5}
+        &   &   & 3 & 4 \\
+        &   &   & 3 & 4 \\
+    \cline{4-5}
+        &   &   &   & 0
+  \end{array}
+\]
+Dividing by a single digit is relatively easy, because you only need to memorize the single-digit multiplication table and carry out some simple subtraction regrouping. One can conceivably perform division by a multi-digit number with the same vertical form, but it is often not well taught in school.
+
+\section{Reciprocal}
+
+Similar to negation for subtraction, Art of Problem Solving also introduced reciprocals before division. A reciprocal is defined as the number that makes $1$ when multiplied by the original number. For example, the reciprocal of $3$ is written $\frac{1}{3}$, and division is simply multiplying by a reciprocal, which makes it play nice with multiplication's associativity, commutativity, and distributive properties.
+
+\section{The Extended Multiplication Table}
+
+One may also extend the single-digit table up to $17 \times 17$. Some kids with good memorization challenge themselves to memorize this extended table.
+
+\vspace{1em}
+\begin{center}
+\setlength{\tabcolsep}{0.28em}
+\newcommand{\rep}[1]{\cellcolor{octanrepeat}\textcolor{octanrepeattext}{#1}}
+\begin{tabular}{|c!{\vrule width 1.2pt}*{15}{c|}}
+\hline
+$\times$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $10$ & $11$ & $12$ & $13$ & $14$ & $15$ & $16$ & $17$ \\
+\noalign{\global\arrayrulewidth=1.2pt}
+\hline
+\noalign{\global\arrayrulewidth=0.4pt}
+$1$ & $1$ & \rep{$2$} & \rep{$3$} & \rep{$4$} & \rep{$5$} & \rep{$6$} & \rep{$7$} & \rep{$10$} & \rep{$11$} & \rep{$12$} & \rep{$13$} & \rep{$14$} & \rep{$15$} & \rep{$16$} & \rep{$17$} \\
+\hline
+$2$ & $2$ & $4$ & \rep{$6$} & \rep{$10$} & \rep{$12$} & \rep{$14$} & \rep{$16$} & \rep{$20$} & \rep{$22$} & \rep{$24$} & \rep{$26$} & \rep{$30$} & \rep{$32$} & \rep{$34$} & \rep{$36$} \\
+\hline
+$3$ & $3$ & $6$ & $11$ & \rep{$14$} & \rep{$17$} & \rep{$22$} & \rep{$25$} & \rep{$30$} & \rep{$33$} & \rep{$36$} & \rep{$41$} & \rep{$44$} & \rep{$47$} & \rep{$52$} & \rep{$55$} \\
+\hline
+$4$ & $4$ & $10$ & $14$ & $20$ & \rep{$24$} & \rep{$30$} & \rep{$34$} & \rep{$40$} & \rep{$44$} & \rep{$50$} & \rep{$54$} & \rep{$60$} & \rep{$64$} & \rep{$70$} & \rep{$74$} \\
+\hline
+$5$ & $5$ & $12$ & $17$ & $24$ & $31$ & \rep{$36$} & \rep{$43$} & \rep{$50$} & \rep{$55$} & \rep{$62$} & \rep{$67$} & \rep{$74$} & \rep{$101$} & \rep{$106$} & \rep{$113$} \\
+\hline
+$6$ & $6$ & $14$ & $22$ & $30$ & $36$ & $44$ & \rep{$52$} & \rep{$60$} & \rep{$66$} & \rep{$74$} & \rep{$102$} & \rep{$110$} & \rep{$116$} & \rep{$124$} & \rep{$132$} \\
+\hline
+$7$ & $7$ & $16$ & $25$ & $34$ & $43$ & $52$ & $61$ & \rep{$70$} & \rep{$77$} & \rep{$106$} & \rep{$115$} & \rep{$124$} & \rep{$133$} & \rep{$142$} & \rep{$151$} \\
+\hline
+$10$ & $10$ & $20$ & $30$ & $40$ & $50$ & $60$ & $70$ & $100$ & \rep{$110$} & \rep{$120$} & \rep{$130$} & \rep{$140$} & \rep{$150$} & \rep{$160$} & \rep{$170$} \\
+\hline
+$11$ & $11$ & $22$ & $33$ & $44$ & $55$ & $66$ & $77$ & $110$ & $121$ & \rep{$132$} & \rep{$143$} & \rep{$154$} & \rep{$165$} & \rep{$176$} & \rep{$207$} \\
+\hline
+$12$ & $12$ & $24$ & $36$ & $50$ & $62$ & $74$ & $106$ & $120$ & $132$ & $144$ & \rep{$156$} & \rep{$170$} & \rep{$202$} & \rep{$214$} & \rep{$226$} \\
+\hline
+$13$ & $13$ & $26$ & $41$ & $54$ & $67$ & $102$ & $115$ & $130$ & $143$ & $156$ & $171$ & \rep{$204$} & \rep{$217$} & \rep{$232$} & \rep{$245$} \\
+\hline
+$14$ & $14$ & $30$ & $44$ & $60$ & $74$ & $110$ & $124$ & $140$ & $154$ & $170$ & $204$ & $220$ & \rep{$234$} & \rep{$250$} & \rep{$264$} \\
+\hline
+$15$ & $15$ & $32$ & $47$ & $64$ & $101$ & $116$ & $133$ & $150$ & $165$ & $202$ & $217$ & $234$ & $251$ & \rep{$266$} & \rep{$303$} \\
+\hline
+$16$ & $16$ & $34$ & $52$ & $70$ & $106$ & $124$ & $142$ & $160$ & $176$ & $214$ & $232$ & $250$ & $266$ & $304$ & \rep{$322$} \\
+\hline
+$17$ & $17$ & $36$ & $55$ & $74$ & $113$ & $132$ & $151$ & $170$ & $207$ & $226$ & $245$ & $264$ & $303$ & $322$ & $341$ \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{1em}
+

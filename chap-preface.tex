@@ -1,0 +1,59 @@
+\chapter{Preface}
+\label{ch:preface}
+
+Most of us learn to count before we notice that counting has a base. It is no accident that we chose base-10. Most of us have ten fingers.
+
+Biologically, there is no particular advantage to five fingers on a hand rather than four, or six, or even three. A horse stands on one toe. A cow or a deer stands on two. A rhinoceros has three. A pig has four on each foot. Sloths go further: some species have two fingers on each hand, and some have three. Most evolutionary biologists think five fingers per hand is almost certainly an accident, not an evolutionary necessity.
+
+Nevertheless, base-10 counting, and the arithmetic that comes with it, is how we built our early intuition for mathematics, and it stays with us throughout life. Most of us no longer count fingers to figure out that $6 + 7 = 13$. It simply comes to us naturally. This instinct is important for everyday life.
+
+I learned other bases probably in my preteen years and I found them fascinating. However, most of these studies, or so-called arithmetic rules, treat other bases as non-native systems, and focus on how to convert to or from those systems back into our familiar base-10 decimal system. For example, if you ask an AI agent how to compute the square of $276$ in octal (base-8), most of them would come back with an answer like the following:
+
+\vspace{1em}
+\noindent
+\begingroup
+\setlength{\fboxsep}{8pt}
+\fbox{%
+\begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+First, convert it to a decimal number,
+\[
+  276_{8} = 190_{10}.
+\]
+Second, do the actual squaring,
+\[
+  190^{2} = 36{,}100.
+\]
+Finally, convert the result back to octal,
+\[
+  36{,}100_{10} = 106{,}404_{8}.
+\]
+\end{minipage}}
+\endgroup
+\par\vspace{1em}
+
+There is nothing wrong with this approach, but I realized much later in life that this is not true arithmetic in another base. It is simply for representation. Computer binary representation, and the gates and circuitry associated with it, might be the only practical system that implements such a non-base-10 system natively. No one, at least no human, truly lives in a world that is not base-10.
+
+I then wondered what would have happened if evolution had happened to give us a different number of fingers. How would our mathematical intuition change? The truth is, it probably would not change much after algebra. Once things are abstracted, almost all of the rules stay the same. For example, the quadratic equation $ax^{2} + bx + c = 0$ has the roots
+\[
+  x = \dfrac{-b \pm \sqrt{b^{2} - 4ac}}{2a}.
+\]
+In a base-5 or higher system, nothing changes. In a base-4 system, the only thing you need to change is that coefficient $4$, which becomes $10_{4}$.
+
+I studied mathematical intuition in a few different systems, and I found base-8 to be the most fun, and not too annoying. If the base is too small, say, base-4, a relatively trivial arithmetic problem might deal with pretty long numbers. That is annoying, and it is not good for early intuition. You might think a base-12 or base-16 system has the advantage of using shorter numbers to represent big concepts. That is true, but I found the basic arithmetic difficult to learn.
+
+We all learned the $9 \times 9$ multiplication table pretty early. We obviously do not have to memorize all $81$ combinations in that table. First, $1$ times any number is trivial. Then, if you have memorized $3 \times 6$, you do not have to memorize $6 \times 3$. Typically, kids only need to memorize $36$ combinations there, or even fewer if doubling or multiplying by $5$ feels intuitive on its own. In a base-12 multiplication table, by comparison, one has to memorize $55$ combinations. That is more than a $50\%$ increase in memory for a merely two-point increase in the base. Do you expect an eight-year-old to memorize $55$ multiplication combinations fluently? Now imagine learning early arithmetic in a base-16 system. It will be a disaster.
+
+Certain civilizations did use base-12. In the Nigerian Middle Belt, Janji, Piti, Gbiri-Niragu, and the Nimbia dialect of Gwandara count by twelves, and the Chepang of Nepal and the Sora of Odisha have been described as doing so too. It did not become popular, probably because base-10 provides a better balance for early intuition.
+
+What would have happened if evolution had given us eight fingers, and so we had adopted a base-8 number system? What would have happened if we had built all of our early mathematical intuition on that? This book is just about that. Later chapters will not contain base-10 numbers or base-10 arithmetic at all. We might refer to how a concept or a rule works in base-10, but we will not write any base-10 numbers.\footnote{To convert a base-10 number to base-8, divide by $8$ and keep the remainder, then repeat on the quotient until the quotient is zero. The remainders, read from last to first, are the base-8 digits. For $156_{10}$,
+\begin{align*}
+  156 \div 8 &= 19 \text{ remainder } 4, \\
+  19 \div 8 &= 2 \text{ remainder } 3, \\
+  2 \div 8 &= 0 \text{ remainder } 2,
+\end{align*}
+so $156_{10} = 234_{8}$. To convert back, multiply each base-8 digit by the matching power of $8$ and add:
+\[
+  234_{8} = 2 \times 8^{2} + 3 \times 8 + 4 = 156_{10}.
+\]}
+
+Now let's pretend we all have eight fingers\ldots\ let the magic begin.

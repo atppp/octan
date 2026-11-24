@@ -1,0 +1,197 @@
+\chapter{Counting and Numbers}
+\label{ch:numbers}
+
+Most of us learn the counting words before we notice how they are written. The words run one, two, three, four, five, six, seven, ten.\footnote{There is no word ``eight'' or ``nine.'' They are nonsensical. I could make up a different word for $10$ in base-8, but then I would need another word for ``hundred.'' I decided to simply use ``ten,'' so the rest feels more consistent. There is a famous joke that every base is base-$10$. Sanjay Kulkarni drew it in \emph{Cowbirds in Love}: \url{https://daniel.haxx.se/blog/2021/05/04/every-base-is-base-10/}.} Ten is the next word after seven. It names that many things.
+
+Up through seven, each word has a symbol of its own: $1$, $2$, $3$, $4$, $5$, $6$, $7$. (Many cultures came up with symbols of their own. These, made in India and spread through the Arabic world, became the most universal.) We can keep making symbols. Ten could have one, eleven another, and every larger number a symbol never used before. For a while that works. Then there are too many symbols to learn.
+
+How do we manage bigger numbers? Many different early civilizations and tribes, even ones that never met, all came up with the same bundling idea. Because we all have ten fingers, many cultures choose to bundle ten things together, and let the bundle be the new unit. Ten is one more than seven, so the bundle begins just where the single symbols run out. A larger number is then a count of bundles, plus what is left over. Bigger numbers become easier to manage.
+
+We can choose to write a bundle as a fresh new symbol, which is what the Roman numbers do (we will mention that later in this chapter). However, if we want to keep using the old symbols, we can use a column format. Three bundles with two left over is written $32$, and the $3$ is the tens digit. When nothing is left over, that column is empty. An empty place is easy to lose, so we write it $0$. Three bundles and nothing left over is $30$, and ten itself is $10$. This is a concise way to write bigger numbers without inventing new symbols. As the number becomes bigger, ten bundles can be a bigger unit, called a hundred, written $100$. Once this system is made, we can keep counting up without inventing new symbols, and a large number becomes a long string of such symbols.
+
+\section{Names for Numbers}
+
+As mentioned earlier, each number has a name. Beyond ten, English chose to give some special names for some of the numbers. Here are some examples.
+
+\begin{center}
+\setlength{\tabcolsep}{0.8em}
+\begin{tabular}{|r|l|}
+\hline
+$1$ & one \\
+\hline
+$2$ & two \\
+\hline
+$3$ & three \\
+\hline
+$4$ & four \\
+\hline
+$5$ & five \\
+\hline
+$6$ & six \\
+\hline
+$7$ & seven \\
+\hline
+$10$ & ten \\
+\hline
+$11$ & eleven \\
+\hline
+$12$ & twelve \\
+\hline
+$13$ & thirteen \\
+\hline
+$14$ & fourteen \\
+\hline
+$15$ & fifteen \\
+\hline
+$16$ & sixteen \\
+\hline
+$17$ & seventeen \\
+\hline
+$20$ & twenty \\
+\hline
+$30$ & thirty \\
+\hline
+$40$ & forty \\
+\hline
+$50$ & fifty \\
+\hline
+$60$ & sixty \\
+\hline
+$70$ & seventy \\
+\hline
+$100$ & hundred \\
+\hline
+$1{,}000$ & thousand \\
+\hline
+$1{,}000{,}000$ & million \\
+\hline
+$1{,}000{,}000{,}000$ & billion \\
+\hline
+\end{tabular}
+\end{center}
+
+A number with more than one digit is said from the bigger name down. $32$ is thirty-two, the tens name and then the ones. $234$ is two hundred thirty-four. Commas split a long number into groups of three. $2{,}024{,}732{,}100$ is two billion, twenty-four million, seven hundred thirty-two thousand, one hundred.
+
+Grouping digits by three is common in Europe and America, but not universal. East Asian languages name the big steps every four digits instead. For example, Chinese names $1{,}0000$ \zh{万}, and $1{,}0000{,}0000$ \zh{亿}.
+
+Nevertheless, for most languages, the number names stay the same. One notable mention is French. French has a word, ``quatre-vingts,'' which literally means four twenties. Bigger numbers are made by adding to it. Such a word is not necessary, because $4 \times 20 = 100$. It is simply a longer way of saying a hundred. I bet numbers in French are much simpler to learn here.
+
+\ifdim\pagetotal>0.7\pagegoal
+  \newpage
+\fi
+\section{Roman Numbers}
+
+Roman numbers come from ancient Rome. Here are the symbols for some ``good'' bundles.
+
+\begin{center}
+\setlength{\tabcolsep}{0.8em}
+\begin{tabular}{|c|c|}
+\hline
+symbol & number \\
+\hline
+I & $1$ \\
+\hline
+V & $4$ \\
+\hline
+X & $10$ \\
+\hline
+L & $40$ \\
+\hline
+C & $100$ \\
+\hline
+D & $400$ \\
+\hline
+M & $1{,}000$ \\
+\hline
+\end{tabular}
+\end{center}
+
+Other numbers are written as a string of these symbols. The symbols are added together. A symbol for $1$, $10$, $100$, or $1{,}000$ is not written more than twice. Instead, we use a smaller symbol before a larger one to represent ``taken away.'' For example, $3$ is written as IV. ``Half bundle'' symbols (V, L, and D) are not repeated. These rules are a bit hard to digest, but the examples below should make them pretty intuitive if you have seen Roman numbers elsewhere.
+
+From $1$ to $24$:
+
+\begin{center}
+\setlength{\tabcolsep}{0.6em}
+\begin{tabular}{|r|c|r|c|r|c|r|c|}
+\hline
+$1$ & I & $2$ & II & $3$ & IV & $4$ & V \\
+\hline
+$5$ & VI & $6$ & VII & $7$ & IX & $10$ & X \\
+\hline
+$11$ & XI & $12$ & XII & $13$ & XIV & $14$ & XV \\
+\hline
+$15$ & XVI & $16$ & XVII & $17$ & XIX & $20$ & XX \\
+\hline
+$21$ & XXI & $22$ & XXII & $23$ & XXIV & $24$ & XXV \\
+\hline
+\end{tabular}
+\end{center}
+
+A few bigger ones:
+
+\begin{center}
+\setlength{\tabcolsep}{0.8em}
+\begin{tabular}{|r|c|}
+\hline
+$30$ & XL \\
+\hline
+$234$ & CCXLV \\
+\hline
+$1{,}732$ & MCMXLII \\
+\hline
+$2{,}024$ & MMXXV \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Hundreds}
+\label{sec:hundreds}
+
+Here is a hundreds table that toddlers often use to familiarize themselves with bigger numbers.
+
+\begin{center}
+\setlength{\tabcolsep}{0.55em}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+$1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $10$ \\
+\hline
+$11$ & $12$ & $13$ & $14$ & $15$ & $16$ & $17$ & $20$ \\
+\hline
+$21$ & $22$ & $23$ & $24$ & $25$ & $26$ & $27$ & $30$ \\
+\hline
+$31$ & $32$ & $33$ & $34$ & $35$ & $36$ & $37$ & $40$ \\
+\hline
+$41$ & $42$ & $43$ & $44$ & $45$ & $46$ & $47$ & $50$ \\
+\hline
+$51$ & $52$ & $53$ & $54$ & $55$ & $56$ & $57$ & $60$ \\
+\hline
+$61$ & $62$ & $63$ & $64$ & $65$ & $66$ & $67$ & $70$ \\
+\hline
+$71$ & $72$ & $73$ & $74$ & $75$ & $76$ & $77$ & $100$ \\
+\hline
+\end{tabular}
+\end{center}
+
+We will use this table quite a bit later, for example for prime numbers and for games.
+
+\section{Common Day Examples}
+
+American grades run from grade $1$ to grade $14$. Grade $1$ is typically age $7$. Each grade is one year older than the grade before it.
+
+\begin{center}
+\begin{tabular}{cc@{\hspace{3em}}cc}
+grade & age & grade & age \\
+$1$ & $7$ & $7$ & $15$ \\
+$2$ & $10$ & $10$ & $16$ \\
+$3$ & $11$ & $11$ & $17$ \\
+$4$ & $12$ & $12$ & $20$ \\
+$5$ & $13$ & $13$ & $21$ \\
+$6$ & $14$ & $14$ & $22$ \\
+\end{tabular}
+\end{center}
+
+Grade $14$ is the last of these before college. The age then is $22$, which is usually considered the start of adulthood. Alcohol consumption requires age $25$, though.
+
+In English, teenage is the word for ages whose names end in ``teen,'' which may or may not be meaningful in certain contexts now.
+
+A year has $555$ days. A leap year has $556$. A day has $30$ hours, and a clock shows $14$ of them. A chessboard is $10$ by $10$, so it has $100$ squares.

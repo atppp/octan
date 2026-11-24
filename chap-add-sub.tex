@@ -1,0 +1,92 @@
+\chapter{Addition and Subtraction}
+\label{ch:add-sub}
+
+Addition is the most basic arithmetic operation---it is counting on from one number by another. The number you land on is the sum. From $3$, count on $4$, and you land on $7$. That is written $3 + 4 = 7$.
+
+\section{Addition Table}
+
+Toddlers typically start with single-digit additions. As the numbers get bigger, the sum becomes larger than $10$. Often we build intuition around this and don't memorize it, but here is a full addition table.
+
+\vspace{1em}
+\begin{center}
+\setlength{\tabcolsep}{0.55em}
+\newcommand{\rep}[1]{\cellcolor{octanrepeat}\textcolor{octanrepeattext}{#1}}
+\begin{tabular}{|c!{\vrule width 1.2pt}c|c|c|c|c|c|c|}
+\hline
+$+$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ \\
+\noalign{\global\arrayrulewidth=1.2pt}
+\hline
+\noalign{\global\arrayrulewidth=0.4pt}
+$1$ & $2$ & \rep{$3$} & \rep{$4$} & \rep{$5$} & \rep{$6$} & \rep{$7$} & \rep{$10$} \\
+\hline
+$2$ & $3$ & $4$ & \rep{$5$} & \rep{$6$} & \rep{$7$} & \rep{$10$} & \rep{$11$} \\
+\hline
+$3$ & $4$ & $5$ & $6$ & \rep{$7$} & \rep{$10$} & \rep{$11$} & \rep{$12$} \\
+\hline
+$4$ & $5$ & $6$ & $7$ & $\mathbf{10}$ & \rep{$11$} & \rep{$12$} & \rep{$13$} \\
+\hline
+$5$ & $6$ & $7$ & $\mathbf{10}$ & $11$ & $12$ & \rep{$13$} & \rep{$14$} \\
+\hline
+$6$ & $7$ & $\mathbf{10}$ & $11$ & $12$ & $13$ & $14$ & \rep{$15$} \\
+\hline
+$7$ & $\mathbf{10}$ & $11$ & $12$ & $13$ & $14$ & $15$ & $16$ \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{1em}
+
+Pairs that add to $10$ are ``friendly'': $1 + 7 = 2 + 6 = 3 + 5 = 4 + 4 = 10$. Some people find this intuition useful for carry-over. For example, when they compute $5 + 7$, they first take $3$ away from $7$ because that $3$ paired with $5$ makes an even $10$, and the remaining $4$ becomes the ones digit, thus the result is $14$. Similarly, $53$ and $25$ are friendly because they make up an even $100$. We often times identify friendly numbers in adding up a lot of numbers together (for example, counting UNO points).
+
+Once a kid is comfortable with this single-digit addition table and the carry-over rule, they can use vertical form to add two numbers with an arbitrary number of digits, and sometimes even more numbers altogether. Here are three four-digit numbers:
+\[
+  \begin{array}{@{}c@{\hspace{0.75em}}c@{\hspace{0.55em}}c@{\hspace{0.55em}}c@{\hspace{0.55em}}c@{\hspace{0.55em}}c@{}}
+      & {\scriptscriptstyle 1} & {\scriptscriptstyle 2} & {\scriptscriptstyle 2} & {\scriptscriptstyle 1} & \\
+      & & 4 & 5 & 6 & 7 \\
+      & & 3 & 4 & 5 & 6 \\
+    + & & 5 & 6 & 7 & 0 \\
+    \cline{2-6}
+      & 1 & 6 & 1 & 3 & 5
+  \end{array}
+\]
+Those smaller numbers on top are carry-overs. It's often easier to write them down so we don't forget or get confused.
+
+\section{Subtraction}
+
+Subtraction is the reverse of addition. From $3 + 4 = 7$ we also have $7 - 4 = 3$ and $7 - 3 = 4$.
+
+The vertical form is often taught using regrouping. When a digit is too small to be subtracted from, take $1$ from the digit to its left. That borrowed $1$ is grouped as $10$ in the current column. Students sometimes put a dot on the digit that lent it, so that digit counts as one less. For example,
+\[
+  \begin{array}{@{}c@{\hspace{0.75em}}c@{\hspace{0.55em}}c@{\hspace{0.55em}}c@{}}
+      & 5 & \mbox{\shortstack{.\\4}} & 3 \\
+    - & 2 & 1 & 6 \\
+    \cline{2-4}
+      & 3 & 2 & 5
+  \end{array}
+\]
+The only dot is on $4$. In the ones column, $3$ is too small for $6$, so the borrowed $10$ makes it $13 - 6 = 5$. The $4$ then counts as $3$, and $3 - 1 = 2$. The hundreds column is $5 - 2 = 3$ as usual.
+
+Once a column has been regrouped, some people prefer the same friendly numbers for subtraction. For example, here we did $13 - 6$. Split $13$ into $10$ and $3$, and hold onto the $3$. Then $10 - 6$ gives $2$, since $2$ and $6$ are friendly. Add that $2$ to the $3$ we held onto, and the result is $5$. Some kids find this a lot more intuitive than memorizing the full addition table, especially for subtraction.
+
+\section{Negative Numbers}
+
+Negative numbers are thought to have been invented for subtracting a bigger number from a smaller one. For example, $5 - 3 = 2$, and the reverse is $3 - 5 = -2$. For a smaller number minus a bigger one, it is often more intuitive to simply flip the order, do the subtraction as usual, and put the negation sign in front.
+
+\section{Negation before Subtraction}
+
+In some books, notably Art of Problem Solving, negative numbers and negation are taught before subtraction. For example, $-3$ is defined as the number that makes $0$ when added to $3$: $3 + (-3) = 0$. Subtraction is then simply adding a negation: $a - b = a + (-b)$.
+
+I find this sometimes a lot more intuitive. Addition is associative and commutative, which means you can change the order of an addition freely, sometimes for an easier computation. For example, $53$ and $25$ are friendly, so
+\[
+  (53 + 47) + 25 = 47 + (53 + 25) = 47 + 100 = 147.
+\]
+
+In contrast, subtraction is neither associative nor commutative, which is annoying. For example,
+\begin{align*}
+  (3 - 5) - 2 &= (-2) - 2 = -4, \\
+  3 - (5 - 2) &= 3 - 3 = 0.
+\end{align*}
+
+However, if we treat subtraction simply as addition by negating its operand, it is much easier to move the pieces around and reason about them. For $53 - 47 + 25$, move the $25$ next to its friendly partner:
+\[
+  53 - 47 + 25 = 53 + (-47) + 25 = 53 + 25 + (-47) = 100 - 47 = 31.
+\]

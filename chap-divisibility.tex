@@ -1,0 +1,116 @@
+\chapter{Divisibility}
+\label{ch:divisibility}
+
+We often want to know whether a number is divisible by another. Can I split all the candies evenly among my kids? That is a practical use. The same question is also the foundation of many mathematical strategies, including prime factorization. Among other things, prime factorization is how we find a common denominator, and so it is the foundation of fraction arithmetic.
+
+\section{Divisibility by $2$ and $4$}
+
+Since $10$ is divisible by $2$ and by $4$, divisibility by $2$ and $4$ is extremely simple: you just need to look at the last digit.
+
+A number is divisible by $2$ when the last digit is an even number: $0$, $2$, $4$, or $6$. The last digit must be $0$ or $4$ for it to be divisible by $4$.
+
+For example, $12$ is divisible by $2$ but not by $4$, while $14$ and $10$ are divisible by both.
+
+\section{Divisibility by $7$}
+
+The test for divisibility by $7$ is to add up all the digits. If that sum is divisible by $7$, then the original number is divisible by $7$ too.\footnote{In order to see why this is true, let's take a look at a three-digit number $abc$, which can be written as $100a + 10b + c$, and rewritten as $(77a + 7b) + (a + b + c)$. The first part is clearly a multiple of $7$, so it does not change whether the whole number is divisible by $7$. As a result, the sum of its digits, $a + b + c$, alone determines whether $abc$ is divisible by $7$. Essentially, just like $9$ is special in the base-10 system, $7$ is special in this world. In the base-10 system, divisibility by $3$ is also easy, because $9$ \emph{happens} to be a multiple of $3$. There is no such lucky treatment in the base-8 world. Divisibility by $7$ is the only case you can test simply by adding up all the digits.}
+
+For example, let's test the number $6{,}573$. The digits add to $6 + 5 + 7 + 3 = 25$, and $25$ is a multiple of $7$ (you should memorize the multiplication table by now!), so $6{,}573$ is divisible by $7$.
+
+When the number is much bigger, the sum of the digits can become pretty big, and thus annoying to keep adding. A common strategy is to throw away multiples of $7$ during the sum, because that does not change the divisibility test. For example, let's test $6{,}573{,}617$. Add $6 + 5 = 13$, and throw away the $7$. Then $13 + 3 = 16$, and $16$ is a multiple of $7$, so throw that away too. The next digits are $6$ and $1$, which make $7$, and we throw that away, along with the final $7$. Nothing is left, so $6{,}573{,}617$ is divisible by $7$.
+
+\section{Divisibility by $3$}
+
+The test for divisibility by $3$ is to add the odd-position digits and the even-position digits separately. If the difference between those two sums is a multiple of $3$, then the original number is a multiple of $3$.\footnote{This is because $100$ has a remainder of $1$ when divided by $3$, since $100 = 3 \times 25 + 1$, and $10$ has a remainder of $2$, since $10 = 3 \times 2 + 2$. A remainder of $2$ is the same as $1$ less than a multiple of $3$, since $10 = 11 - 1$. The pattern alternates, so the rule works like this. Let's take a look at a four-digit number $abcd$, which can be written as $1000a + 100b + 10c + d$. Since $1000 = 3 \times 253 - 1$, $100 = 3 \times 25 + 1$, and $10 = 3 \times 3 - 1$, it can be rewritten as $3(253a + 25b + 3c) + (b + d - a - c)$. The first part is clearly a multiple of $3$, so it does not change whether the whole number is divisible by $3$. As a result, the difference between the odd-position digits, $b + d$, and the even-position digits, $a + c$, alone determines whether $abcd$ is divisible by $3$.}
+
+For example, let's test $13{,}767$. The lines above the thousands digit and the tens digit mark the even positions, and the lines below mark the odd positions.
+\[
+  \setlength{\unitlength}{1em}
+  \begin{picture}(8.8,6.4)(-0.4,-3.2)
+    \put(0,0){\makebox(0,0){$1$}}
+    \put(2,0){\makebox(0,0){$3$}}
+    \put(4,0){\makebox(0,0){$7$}}
+    \put(6,0){\makebox(0,0){$6$}}
+    \put(8,0){\makebox(0,0){$7$}}
+    \put(2,0.9){\line(0,1){0.85}}
+    \put(6,0.9){\line(0,1){0.85}}
+    \put(2,1.75){\line(1,0){4}}
+    \put(4,2.6){\makebox(0,0){$11$}}
+    \put(0,-0.9){\line(0,-1){0.85}}
+    \put(4,-0.9){\line(0,-1){0.85}}
+    \put(8,-0.9){\line(0,-1){0.85}}
+    \put(0,-1.75){\line(1,0){8}}
+    \put(4,-2.6){\makebox(0,0){$17$}}
+  \end{picture}
+\]
+The difference is $17 - 11 = 6$, which is a multiple of $3$, so $13{,}767$ is a multiple of $3$.
+
+\section{Divisibility by $5$}
+
+The test for divisibility by $5$ is a similar alternating pattern to divisibility by $3$, but with groups of two digits, taken from the right. Add every other pair, and add the rest of pairs, separately. If the difference between those two sums is a multiple of $5$, then the original number is a multiple of $5$.\footnote{This is because $100$ is one less than a multiple of $5$, while $10{,}000$ is one more. The pairs therefore alternate, and this is the easiest pattern for the test.}
+
+For example, let's test $23{,}261{,}524$. Each bracket takes a pair of digits. The brackets above mark every other pair, and the brackets below mark the rest of pairs.
+\[
+  \setlength{\unitlength}{1em}
+  \begin{picture}(12.4,7.5)(-0.5,-3.7)
+    \put(0,0){\makebox(0,0){$2$}}
+    \put(1.2,0){\makebox(0,0){$3$}}
+    \put(3.4,0){\makebox(0,0){$2$}}
+    \put(4.6,0){\makebox(0,0){$6$}}
+    \put(6.8,0){\makebox(0,0){$1$}}
+    \put(8.0,0){\makebox(0,0){$5$}}
+    \put(10.2,0){\makebox(0,0){$2$}}
+    \put(11.4,0){\makebox(0,0){$4$}}
+    \put(0,0.9){\line(0,1){0.6}}
+    \put(1.2,0.9){\line(0,1){0.6}}
+    \put(0,1.5){\line(1,0){1.2}}
+    \put(0.6,1.5){\line(0,1){0.75}}
+    \put(6.8,0.9){\line(0,1){0.6}}
+    \put(8.0,0.9){\line(0,1){0.6}}
+    \put(6.8,1.5){\line(1,0){1.2}}
+    \put(7.4,1.5){\line(0,1){0.75}}
+    \put(0.6,2.25){\line(1,0){6.8}}
+    \put(4.0,3.1){\makebox(0,0){$40$}}
+    \put(3.4,-0.9){\line(0,-1){0.6}}
+    \put(4.6,-0.9){\line(0,-1){0.6}}
+    \put(3.4,-1.5){\line(1,0){1.2}}
+    \put(4.0,-1.5){\line(0,-1){0.75}}
+    \put(10.2,-0.9){\line(0,-1){0.6}}
+    \put(11.4,-0.9){\line(0,-1){0.6}}
+    \put(10.2,-1.5){\line(1,0){1.2}}
+    \put(10.8,-1.5){\line(0,-1){0.75}}
+    \put(4.0,-2.25){\line(1,0){6.8}}
+    \put(7.4,-3.1){\makebox(0,0){$52$}}
+  \end{picture}
+\]
+The difference is $52 - 40 = 12$, which is a multiple of $5$, so $23{,}261{,}524$ is a multiple of $5$.
+
+\ifdim\pagetotal>0.72\pagegoal
+  \newpage
+\fi
+\section{Summary}
+
+The table below summarizes all the tests mentioned above.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|c|p{5.15in}|}
+\hline
+$2$ & The last digit is $0$, $2$, $4$, or $6$. \\
+\hline
+$3$ & Add the odd-position digits and the even-position digits. Their difference is a multiple of $3$. \\
+\hline
+$4$ & The last digit is $0$ or $4$. \\
+\hline
+$5$ & Group the digits in pairs from the right. Add every other pair, and add the rest of pairs. Their difference is a multiple of $5$. \\
+\hline
+$6$ & The number is divisible by $2$ and by $3$. \\
+\hline
+$7$ & Add the digits. The final digit is $7$. \\
+\hline
+$10$ & The number ends with $0$. \\
+\hline
+\end{tabular}
+\end{center}
+
+We can see here that testing $2$, $4$, $7$, and $10$ is quick. I'd say testing $3$ is not that bad once you get the hang of it; thus testing $6$ is okay as well. $5$ is probably the oddest one, and I am usually not excited about testing if a number is divisible by $5$ or not.

@@ -1,0 +1,73 @@
+% Octan — an intro to an octal world.
+\documentclass[11pt,oneside]{book}
+
+\usepackage[
+  letterpaper,
+  margin=2cm,
+]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[hidelinks,pdfpagemode=UseNone,bookmarks=false,
+  pdftitle={Octan: an intro to an octal world},
+  pdfauthor={Xinan Wu, Olivia Wu}]{hyperref}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cancel}
+\usepackage{longtable}
+\usepackage{colortbl}
+\usepackage{tikz}
+\usepackage[bigger]{musicography}
+\definecolor{octanrepeat}{gray}{0.90}
+\definecolor{octanrepeattext}{gray}{0.82}
+\usepackage{CJKutf8}
+\newcommand{\zh}[1]{\mbox{\begin{CJK}{UTF8}{gbsn}#1\end{CJK}}}
+
+% Print arabic counters in base 8. \frontmatter still uses roman numerals.
+% Chapter numbers reach two octal digits, so the contents number box needs room.
+\makeatletter
+\ExplSyntaxOn
+\cs_set:Npn \@arabic #1 { \int_to_oct:n { #1 } }
+\ExplSyntaxOff
+\patchcmd{\l@chapter}{\setlength\@tempdima{1.5em}}{\setlength\@tempdima{2.5em}}{}{}
+\makeatother
+
+\title{Octan\\[0.55em]\large\normalfont\textit{an intro to an octal world}%
+  \thanks{The source of this book is at \url{https://github.com/atppp/octan}.}}
+\author{Xinan Wu\\[0.7em]
+  {\small\scshape and}\\[0.7em]
+  Olivia Wu}
+\date{}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+% oneside titlepage resets the page counter, so the preface would also be page i.
+\setcounter{page}{2}
+\setcounter{tocdepth}{0}
+\onehalfspacing
+\hypersetup{pageanchor=true}
+
+\input{chap-preface}
+\tableofcontents
+
+\mainmatter
+
+\input{chap-numbers}
+\input{chap-add-sub}
+\input{chap-mul-div}
+\input{chap-powers}
+\input{chap-divisibility}
+\input{chap-primes}
+\input{chap-point}
+\input{chap-logs}
+\input{chap-game}
+
+\backmatter
+
+\end{document}
