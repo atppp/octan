@@ -9,6 +9,8 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{microtype}
+\usepackage[noautomatic]{imakeidx}
+\makeindex[intoc,columns=2,title=Index]
 \usepackage[hidelinks,hyperfootnotes=false,pdfpagemode=UseNone,bookmarks=false,
   pdftitle={Octan: an intro to an octal world},
   pdfauthor={Xinan Wu, Olivia Wu}]{hyperref}
@@ -132,6 +134,7 @@ We thank AI agents for generating the boring stuff in this book. The interesting
 \input{chap-point}
 \input{chap-logs}
 \input{chap-game}
+\input{chap-exercises}
 
 \backmatter
 \input{chap-afterword}
@@ -142,5 +145,7 @@ We thank AI agents for generating the boring stuff in this book. The interesting
 Xinan Wu holds a Ph.D.\ in Physics and enjoys teaching math to his daughter far more than is reasonable. He remains mildly convinced that eight fingers would have fixed early arithmetic, and permanently unconvinced that anyone needed a ninth or tenth digit.
 
 Olivia Wu is studying prealgebra and early algebra, and is fascinated by the base-8 world. She still catches herself writing ``ten'' when she means eight, and she has strong opinions about whether $91$ or $31$ is the more annoying composite.
+
+\printindex
 
 \end{document}
