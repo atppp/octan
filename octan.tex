@@ -27,17 +27,43 @@
 \usepackage{CJKutf8}
 \newcommand{\zh}[1]{\mbox{\begin{CJK}{UTF8}{gbsn}#1\end{CJK}}}
 
-% Print arabic counters in base 8. \frontmatter still uses roman numerals.
-% Chapter numbers reach two octal digits, so the contents number box needs room.
+% Print arabic counters in base 8, and roman counters with the book's octal Roman
+% numerals (V = 4, X = 10, ...). Chapter numbers reach two octal digits, so the
+% contents number box needs room.
 \makeatletter
 \ExplSyntaxOn
 \cs_set:Npn \@arabic #1 { \int_to_oct:n { #1 } }
+% Expandable octal Roman numerals (book rules: V = 4, X = 10, ...).
+% A lookup keeps \thepage safe for hyperref and the .toc file.
+\cs_new:Npn \octan_roman_lower:n #1
+  {
+    \str_case:nnF {#1}
+      {
+        {1}{i}{2}{ii}{3}{iv}{4}{v}{5}{vi}{6}{vii}{7}{ix}
+        {8}{x}{9}{xi}{10}{xii}{11}{xiv}{12}{xv}{13}{xvi}
+        {14}{xvii}{15}{xix}{16}{xx}{17}{xxi}{18}{xxii}
+        {19}{xxiv}{20}{xxv}{21}{xxvi}{22}{xxvii}{23}{xxix}
+        {24}{xl}{25}{xli}{26}{xlii}{27}{xliv}{28}{xlv}
+        {29}{xlvi}{30}{xlvii}{31}{xlix}{32}{l}{33}{li}
+        {34}{lii}{35}{liv}{36}{lv}{37}{lvi}{38}{lvii}
+        {39}{lix}{40}{lx}{41}{lxi}{42}{lxii}{43}{lxiv}
+        {44}{lxv}{45}{lxvi}{46}{lxvii}{47}{lxix}{48}{lxx}
+        {49}{lxxi}{50}{lxxii}{51}{lxxiv}{52}{lxxv}{53}{lxxvi}
+        {54}{lxxvii}{55}{lxxix}{56}{xc}{57}{xci}{58}{xcii}
+        {59}{xciv}{60}{xcv}{61}{xcvi}{62}{xcvii}{63}{xcix}
+        {64}{c}
+      }
+      {?}
+  }
+\cs_set:Npn \@roman #1
+  { \exp_args:Nf \octan_roman_lower:n { \number #1 } }
+\cs_set:Npn \@Roman #1
+  { \exp_args:Nf \str_uppercase:n { \exp_args:Nf \octan_roman_lower:n { \number #1 } } }
 \ExplSyntaxOff
 \patchcmd{\l@chapter}{\setlength\@tempdima{1.5em}}{\setlength\@tempdima{2.5em}}{}{}
 \makeatother
 
-\title{Octan\\[0.55em]\large\normalfont\textit{an intro to an octal world}%
-  \thanks{The source of this book is at \url{https://github.com/atppp/octan}.}}
+\title{Octan\\[0.55em]\large\normalfont\textit{an intro to an octal world}}
 \author{Xinan Wu\\[0.7em]
   {\small\scshape and}\\[0.7em]
   Olivia Wu}
@@ -47,13 +73,52 @@
 
 \frontmatter
 \maketitle
-% oneside titlepage resets the page counter, so the preface would also be page i.
+% oneside titlepage resets the page counter, so the next front-matter page would also be i.
 \setcounter{page}{2}
 \setcounter{tocdepth}{0}
 \onehalfspacing
 \hypersetup{pageanchor=true}
 
+\thispagestyle{empty}
+\vspace*{\fill}
+\noindent
+Copyright \copyright\ 2026 Xinan Wu and Olivia Wu.\\[0.6em]
+This work is licensed under \href{https://creativecommons.org/licenses/by-nc-nd/4.0/}{CC BY-NC-ND 4.0}.\\[0.6em]
+The source of this book is at \url{https://github.com/atppp/octan}.\\[0.6em]
+First edition.
+\vspace*{1.5cm}
+\clearpage
+
+\thispagestyle{empty}
+\vspace*{0.28\textheight}
+\begin{center}
+\large
+To Lily,\\[0.55em]
+\normalsize
+for keeping us grounded in the real base-$10$ world.
+\end{center}
+
+\clearpage
+\thispagestyle{empty}
+\vspace*{0.28\textheight}
+\begin{center}
+\large\itshape
+Mathematics is the art of giving\\
+the same name to different things.
+\end{center}
+\vspace{1.2em}
+\begin{center}
+--- Henri Poincaré
+\end{center}
+\clearpage
+
 \input{chap-preface}
+
+\chapter{Acknowledgments}
+\label{ch:ack}
+
+We thank AI agents for generating the boring stuff in this book. The interesting mistakes are our own.
+
 \tableofcontents
 
 \mainmatter
@@ -69,5 +134,13 @@
 \input{chap-game}
 
 \backmatter
+\input{chap-afterword}
+
+\chapter{About the Authors}
+\label{ch:authors}
+
+Xinan Wu holds a Ph.D.\ in Physics and enjoys teaching math to his daughter far more than is reasonable. He remains mildly convinced that eight fingers would have fixed early arithmetic, and permanently unconvinced that anyone needed a ninth or tenth digit.
+
+Olivia Wu is studying prealgebra and early algebra, and is fascinated by the base-8 world. She still catches herself writing ``ten'' when she means eight, and she has strong opinions about whether $91$ or $31$ is the more annoying composite.
 
 \end{document}

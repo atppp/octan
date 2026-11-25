@@ -2,9 +2,7 @@
 BUILD_DIR := build
 PDF       := $(BUILD_DIR)/octan.pdf
 MAIN      := octan.tex
-CHAPTERS  := chap-preface.tex chap-numbers.tex chap-add-sub.tex chap-mul-div.tex \
-              chap-powers.tex chap-divisibility.tex chap-primes.tex chap-point.tex \
-              chap-logs.tex chap-game.tex
+CHAPTERS  := $(wildcard chap-*.tex)
 
 .PHONY: pdf clean distclean
 
