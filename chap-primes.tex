@@ -12,12 +12,14 @@
 }
 \newcommand{\sieve}[1]{%
   \begin{center}
+  \resizebox{\textwidth}{!}{%
   \setlength{\tabcolsep}{0.38em}%
   \renewcommand{\arraystretch}{1.55}%
   \begin{tabular}{|c|c|c|c|c|c|c|c|}
   \hline
   #1
-  \end{tabular}
+  \end{tabular}%
+  }%
   \end{center}
 }
 

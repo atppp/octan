@@ -52,6 +52,7 @@ Take a pile of ordinary numbers and look only at the first digit. Street numbers
 
 The sheet below is log-scale graph paper. The cycle starts over at every power of $10$. A leading digit is just which band the number falls in.
 \begin{center}
+\resizebox{\textwidth}{!}{%
 \begin{tikzpicture}[x=6.2cm,y=1cm]
   \pgfmathsetmacro{\L}{ln(0.5)/ln(8)}
   \pgfmathsetmacro{\R}{ln(128)/ln(8)}
@@ -85,7 +86,8 @@ The sheet below is log-scale graph paper. The cycle starts over at every power o
   \draw[line width=0.8pt] (0,-0.62) -- (0,-0.82);
   \draw[line width=0.8pt] (1,-0.62) -- (1,-0.82);
   \node[below=1pt,font=\scriptsize] at (0.5,-0.72) {one cycle};
-\end{tikzpicture}
+\end{tikzpicture}%
+}
 \end{center}
 If your number distribution is even on a log scale---a very common case in statistics---you can see from this why a leading $1$ appears more often. The exact probability is $1/3$.
 

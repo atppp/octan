@@ -128,8 +128,9 @@ One may also extend the single-digit table up to $17 \times 17$. Some kids with 
 
 \vspace{1em}
 \begin{center}
-\setlength{\tabcolsep}{0.28em}
-\newcommand{\rep}[1]{\cellcolor{octanrepeat}\textcolor{octanrepeattext}{#1}}
+\resizebox{\textwidth}{!}{%
+\setlength{\tabcolsep}{0.28em}%
+\newcommand{\rep}[1]{\cellcolor{octanrepeat}\textcolor{octanrepeattext}{#1}}%
 \begin{tabular}{|c!{\vrule width 1.2pt}*{15}{c|}}
 \hline
 $\times$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $10$ & $11$ & $12$ & $13$ & $14$ & $15$ & $16$ & $17$ \\
@@ -166,7 +167,8 @@ $16$ & $16$ & $34$ & $52$ & $70$ & $106$ & $124$ & $142$ & $160$ & $176$ & $214$
 \hline
 $17$ & $17$ & $36$ & $55$ & $74$ & $113$ & $132$ & $151$ & $170$ & $207$ & $226$ & $245$ & $264$ & $303$ & $322$ & $341$ \\
 \hline
-\end{tabular}
+\end{tabular}%
+}
 \end{center}
 \vspace{1em}
 

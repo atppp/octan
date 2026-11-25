@@ -1,10 +1,17 @@
 % Octan — an intro to an octal world.
+% Format: letter (default) or trade (6in x 9in). Override with
+%   pdflatex '\providecommand{\octanformat}{trade}\input{octan.tex}'
 \documentclass[11pt,oneside]{book}
 
-\usepackage[
-  letterpaper,
-  margin=2cm,
-]{geometry}
+\providecommand{\octanformat}{letter}
+\makeatletter
+\def\octan@trade{trade}
+\ifx\octanformat\octan@trade
+  \usepackage[paperwidth=6in,paperheight=9in,margin=0.75in]{geometry}
+\else
+  \usepackage[letterpaper,margin=2cm]{geometry}
+\fi
+\makeatother
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}

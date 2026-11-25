@@ -36,9 +36,11 @@ $1/13$ seems like the most annoying one here, because it has a long repeating pa
 We can continue this exercise all the way up to $1/100$.
 
 \begingroup
-\setlength{\LTleft}{\fill}
-\setlength{\LTright}{\fill}
-\begin{longtable}{r@{\hspace{0.6em}}c@{\hspace{0.6em}}l}
+\footnotesize
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\setlength{\tabcolsep}{0.3em}
+\begin{longtable}{@{\extracolsep{\fill}}r@{\hspace{0.35em}}c@{\hspace{0.35em}}l@{}}
 $1/21$ & $=$ & $0.\overline{03607417}$ \\
 $1/22$ & $=$ & $0.0\overline{34}$ \\
 $1/23$ & $=$ & $0.\overline{032745}$ \\
@@ -75,13 +77,13 @@ $1/61$ & $=$ & $0.\overline{0123457}$ \\
 $1/62$ & $=$ & $0.0\overline{12172702436560507534}$ \\
 $1/63$ & $=$ & $0.\overline{01202405}$ \\
 $1/64$ & $=$ & $0.0\overline{1166}$ \\
-$1/65$ & $=$ & $0.\overline{0115220717545336140465103476625570602324416373126743}$ \\
+$1/65$ & $=$ & $0.\overline{0115220717545336140465103476\ldots}$ \\
 $1/66$ & $=$ & $0.0\overline{113664}$ \\
 $1/67$ & $=$ & $0.\overline{01123620224744045171}$ \\
 $1/70$ & $=$ & $0.0\overline{1}$ \\
 $1/71$ & $=$ & $0.\overline{010767}$ \\
 $1/72$ & $=$ & $0.0\overline{1064756260432367130215173454}$ \\
-$1/73$ & $=$ & $0.\overline{0105330745756511606404255436276724470320212661713735223415}$ \\
+$1/73$ & $=$ & $0.\overline{0105330745756511606404255436\ldots}$ \\
 $1/74$ & $=$ & $0.0\overline{1042}$ \\
 $1/75$ & $=$ & $0.\overline{01031134247674664353}$ \\
 $1/76$ & $=$ & $0.0\overline{10204}$ \\
@@ -96,6 +98,7 @@ $1/77$ & $=$ & $0.\overline{01}$ \\
 The nice thing about $10$ being a cube $2^{3}$ is that you can just half it three times to get the smallest unit on the tenth digit: $1$, $0.4$, $0.2$, $0.1$. This makes it very easy to put decimal point markers on a typical American ruler (they love fractions of a unit). The half gets a bigger tick, the quarter a medium tick, and the tenth the smallest tick.
 
 \begin{center}
+\resizebox{\textwidth}{!}{%
 \begin{tikzpicture}[x=1.05cm,y=1cm]
   \draw[line width=0.7pt] (0,0) -- (16,0);
   \foreach \n in {0,...,16} {
@@ -121,11 +124,13 @@ The nice thing about $10$ being a cube $2^{3}$ is that you can just half it thre
   \node[above=2pt,font=\small] at (1,1.00) {$1/10$};
   \node[above=2pt,font=\small] at (2,1.00) {$1/4$};
   \node[above=2pt,font=\small] at (4,1.00) {$1/2$};
-\end{tikzpicture}
+\end{tikzpicture}%
+}
 \end{center}
 
 Keep dividing and you get $1/20$ and $1/40$. Music does the same thing. Start with a whole note, cut it in half, and keep going:
 \begin{center}
+\resizebox{\textwidth}{!}{%
 \begin{tikzpicture}
   \def\staffw{12.6}
   \def\staffgap{0.24}
@@ -142,7 +147,8 @@ Keep dividing and you get $1/20$ and $1/40$. Music does the same thing. Start wi
   \node[anchor=base] at (7.35,2*\staffgap) {\scalebox{2}{\musEighth}};
   \node[anchor=base] at (9.45,2*\staffgap) {\scalebox{2}{\musSixteenth}};
   \node[anchor=base] at (11.55,2*\staffgap) {\scalebox{2}{\musThirtySecond}};
-\end{tikzpicture}
+\end{tikzpicture}%
+}
 \end{center}
 
 \section{From Decimal Point to Fraction}
@@ -291,13 +297,15 @@ Decimal point numbers whose digits go on and never repeat are called irrational\
 \index{e@$e$}
 
 \begin{center}
+\resizebox{\textwidth}{!}{%
 $\begin{array}{r@{\hspace{0.4em}}l}
   \pi & = 3.1103\,7552\,4210\,2643\,0215\,1423\,0630\,5056\,0067\,0163\,2112\,2011\,1602\,1051\,4763\,0720\ldots \\[0.4em]
   e & = 2.5576\,0521\ldots \\[0.4em]
   \sqrt{2} & = 1.3240\,4746\ldots \\[0.4em]
   \sqrt{3} & = 1.5666\,3656\ldots \\[0.4em]
   \sqrt[3]{2} & = 1.2050\,5057\ldots
-\end{array}$
+\end{array}$%
+}
 \end{center}
 
 \section{Rounding}
