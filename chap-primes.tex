@@ -46,9 +46,6 @@ $71$ & \sn{72} & $73$ & \sn{74} & $75$ & \sn{76} & $77$ & \sn{100} \\
 \hline
 }
 
-\ifdim\pagetotal>0.48\pagegoal
-  \newpage
-\fi
 Now cross out the multiples of $3$, and circle $3$. The numbers just crossed out are shown in red again.
 
 \sieve{%
@@ -70,9 +67,6 @@ $61$ & \so{62} & \sn{63} & \so{64} & $65$ & \so{66} & $67$ & \so{70} \\
 \hline
 }
 
-\ifdim\pagetotal>0.48\pagegoal
-  \newpage
-\fi
 We continue the process with multiples of $5$. We skipped $4$ because it is a multiple of $2$, so its multiples completely overlap with the multiples of $2$ already crossed out.
 
 \sieve{%
@@ -94,9 +88,6 @@ $61$ & \so{62} & \so{63} & \so{64} & $65$ & \so{66} & \sn{67} & \so{70} \\
 \hline
 }
 
-\ifdim\pagetotal>0.48\pagegoal
-  \newpage
-\fi
 We continue with the multiples of $7$, and it turns out that is all we need to do.\footnote{The next number still standing is $13$, and $13 \times 13 = 171$, which is past $100$. Any number below $100$ that is not prime has a factor of $2$, $3$, $5$, or $7$, so it is already crossed out.} Here is the final board, with every remaining number circled.
 
 \sieve{%
